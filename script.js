@@ -2,15 +2,15 @@ function letterCombinations(input_digit) {
   //Complete the function
 
   var numberStringHt = {
-    2:"abc",
-    3:"def",
-    4:"ghi",
-    5:"jkl",
-    6:"mno",
-    7:"pqrs",
-    8:"tuv",
-    9:"wxyz",
-  }
+    2: "abc",
+    3: "def",
+    4: "ghi",
+    5: "jkl",
+    6: "mno",
+    7: "pqrs",
+    8: "tuv",
+    9: "wxyz",
+  };
   var allCombinations = [];
   for (let i = 0; i < input_digit.length; i++) {
     let firstString = numberStringHt[input_digit[i]] || "";
@@ -21,10 +21,10 @@ function letterCombinations(input_digit) {
         for (let secondLetter of secondString) {
           if (input_digit.length == 3) {
             for (let thirdLetter of thirdString) {
-              allCombinations.push(firstLetter + secondLetter + thirdLetter)
+              allCombinations.push(firstLetter + secondLetter + thirdLetter);
             }
           } else {
-            allCombinations.push(firstLetter + secondLetter)
+            allCombinations.push(firstLetter + secondLetter);
           }
         }
       }
